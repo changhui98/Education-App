@@ -19,6 +19,8 @@ body {
 
 .header {
   overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   .header__list {
     display: flex;
     color: white;
@@ -48,21 +50,24 @@ body {
     border-radius: 15px;
     display: flex;
     flex-direction: column;
+    gap: 40px;
     justify-content: space-between;
     .cards__title {
-      font-size: 24px;
+      font-size: 28px;
     }
     .cards__footer {
-      font-size: 12px;
+      font-size: 14px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       span {
-        padding: 10px;
+        padding: 5px 10px;
         border: 1px solid black;
         border-radius: 20px;
       }
       .price {
+        background-color: rgb(255, 221, 44);
+        border: 1px solid rgb(255, 221, 44);
       }
       .length {
         background-color: white;
@@ -70,8 +75,10 @@ body {
     }
     &:first-child {
       background-color: #292d33;
-      color: white;
       border: 1px solid white;
+      .cards__title {
+        color: white;
+      }
     }
     &:nth-child(2) {
       background-color: #f5f4ef;
